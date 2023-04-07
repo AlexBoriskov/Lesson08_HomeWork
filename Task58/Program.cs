@@ -33,8 +33,6 @@ void PrintArray (int [,] array)
 int [,] MultiplicationMatrix (int [,] array, int [,] matrix)
 {
     int [,] result = new int [array.GetLength(0), matrix.GetLength(1)];
-    // if (array.GetLength(1) == matrix.GetLength(0))
-    // {
         for (int line=0; line<array.GetLength(0); line++)
         {
             for (int column=0; column<matrix.GetLength(1); column++)
@@ -43,12 +41,9 @@ int [,] MultiplicationMatrix (int [,] array, int [,] matrix)
                 {
                     result [line, column] += array[line,t]*matrix[t,column];
                 }
-                // Console.Write ($"{result[line,column]} \t");
             }
-            // Console.WriteLine();
         }
         return (result);
-    // }
 }
 
 Console.Clear();
